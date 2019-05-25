@@ -12,7 +12,7 @@ INSERT INTO state (id, name, description, disease_id) VALUES (9, 'Intensive care
 INSERT INTO state (id, name, description, disease_id) VALUES (10, 'Not Asthma', 'Астма не подтверждена', 1);
 
 INSERT INTO attributes (id, name, type) VALUES (1, 'ПСВ', 'double');
-INSERT INTO attributes (id, name, type) VALUES (2, '2', 'double');
+INSERT INTO attributes (id, name, type) VALUES (2, 'SpO2', 'double');
 INSERT INTO attributes (id, name, type) VALUES (3, 'Состояние',  '["Признаки приступа", "Исчезновение свистящих хрипов", "Свистящие хрипы остаются", "Нарастание симптоматики"]');
 INSERT INTO attributes (id, name, type) VALUES (4, 'Accept hospitalization', 'bool');
 

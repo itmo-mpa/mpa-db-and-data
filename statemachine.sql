@@ -60,7 +60,6 @@ insert into state(id, name, description, disease_id) values (3, 'HSt 3', 'Medica
 insert into state(id, name, description, disease_id) values (4, 'HSt 4', 'Optimal Medical Therapy CAD, AAT, CA, ICD', 1);
 insert into state(id, name, description, disease_id) values (5, 'HSt 5', 'Beta-blockers', 1);
 insert into state(id, name, description, disease_id) values (6, 'HSt 6', 'Амбулаторное лечение', 1);
-insert into state(id, name, description, disease_id) values (7, 'HSt 7', 'Переход на другой автомат', 1);
 
 insert into state(id, name, description, disease_id) values (8, 'HS1', 'ECG, ECG Monitoring', 1);
 insert into state(id, name, description, disease_id) values (9, 'HS2', 'Search for Trigger VA', 1);
@@ -74,7 +73,6 @@ insert into state(id, name, description, disease_id) values (16, 'HS8', 'Exercis
 insert into state(id, name, description, disease_id) values (17, 'HS9', 'Psychodiagnostics requirement evaluation', 1);
 insert into state(id, name, description, disease_id) values (18, 'HS10', 'Psychodiagnostics', 1);
 insert into state(id, name, description, disease_id) values (19, 'HS11', 'Psychotherapy, psychotropic drugs', 1);
-insert into state(id, name, description, disease_id) values (20, 'HS12', 'Уточнение', 1);
 
 insert into transition(id, state_from_id, state_to_id, predicate) values (1, 8, 9, 'eq ({status.1}, true)');
 insert into transition(id, state_from_id, state_to_id, predicate) values (2, 9, 10, 'and (eq ({status.2}, true), and (eq ({status.3}, true), gte ({status.4}, 0.4)))');
@@ -103,6 +101,7 @@ insert into transition(id, state_from_id, state_to_id, predicate) values (26, 8,
 insert into transition(id, state_from_id, state_to_id, predicate) values (27, 9, 2, 'not(and (eq ({status.2}, true), and (eq ({status.3}, true), gte ({status.4}, 0.4))))');
 insert into transition(id, state_from_id, state_to_id, predicate) values (28, 10, 2, 'eq ({status.5}, 2)');
 insert into transition(id, state_from_id, state_to_id, predicate) values (29, 11, 2, 'eq ({status.6}, 5)');
+insert into transition(id, state_from_id, state_to_id, predicate) values (30, 14, 15, 'eq (1, 1)');
 
 
 commit;
